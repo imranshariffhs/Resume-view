@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Imran Shariff HS
 Software Engineer | AWS Certified Solutions Architect
 =======
