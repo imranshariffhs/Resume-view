@@ -18,6 +18,8 @@
             box-sizing: border-box;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+            forced-color-adjust: exact !important;
+            color-adjust: exact !important;
         }
         
         html, body {
@@ -26,10 +28,12 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         body {
-            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
         }
@@ -47,23 +51,180 @@
             color: white !important;
             padding: 30px;
             display: flex;
-            align-items: center;
-            gap: 30px;
-            width: 100%;
             position: relative;
+            width: 100%;
         }
-        
-        .profile-photo {
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            width: 60%;
+        }
+
+        .header-right {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 35%;
+            align-items: flex-end;
+        }
+
+        .profile-photo-container {
             width: 140px;
             height: 140px;
             min-width: 140px;
             border-radius: 50%;
             border: 4px solid white !important;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            forced-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            object-position: center;
+            display: block;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            forced-color-adjust: exact !important;
+            color-adjust: exact !important;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        .certification-badge {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .certification-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
         }
         
+        .certification-badge img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid rgba(255, 153, 0, 0.5);
+            box-shadow: 0 0 15px rgba(255, 153, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .certification-badge:hover img {
+            border-color: rgba(255, 153, 0, 0.7);
+            box-shadow: 0 0 20px rgba(255, 153, 0, 0.3);
+        }
+        
+        .certification-badge .text {
+            color: white !important;
+            font-size: 1em;
+            line-height: 1.3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+        
+        .certification-badge .text strong {
+            color: rgba(255, 153, 0, 0.9) !important;
+            display: block;
+            font-size: 1.2em;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        .social-links a {
+            color: white !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-weight: 500;
+            font-size: 0.95em;
+            width: auto;
+            min-width: 120px;
+            letter-spacing: 0.3px;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .social-links .linkedin {
+            background: rgba(10, 102, 194, 0.15);
+            border: 1px solid rgba(10, 102, 194, 0.25);
+        }
+
+        .social-links .github {
+            background: rgba(36, 41, 46, 0.15);
+            border: 1px solid rgba(36, 41, 46, 0.25);
+        }
+
+        .social-links .linkedin:hover {
+            background: rgba(10, 102, 194, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(10, 102, 194, 0.15);
+        }
+
+        .social-links .github:hover {
+            background: rgba(36, 41, 46, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(36, 41, 46, 0.15);
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            fill: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .social-links a:hover .social-icon {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
         .header-content {
             flex: 1;
+            min-width: 300px;
         }
         
         .name {
@@ -84,14 +245,6 @@
             align-items: center;
             gap: 8px;
             color: white !important;
-        }
-        
-        .social-links {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            display: flex;
-            gap: 15px;
         }
         
         .social-links a {
@@ -272,6 +425,10 @@
                 margin: 0 !important;
                 padding: 0 !important;
                 background: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                forced-color-adjust: exact !important;
+                color-adjust: exact !important;
             }
             
             .resume-container {
@@ -280,13 +437,42 @@
                 margin: 0;
                 padding: 0;
                 box-shadow: none;
+                background: white !important;
             }
             
             .header {
-                width: 100%;
-                background: linear-gradient(135deg, #2c3e50, #3498db) !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
+                display: flex !important;
+                position: relative !important;
+                width: 100% !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .profile-section {
+                width: 60% !important;
+                display: flex !important;
+                position: relative !important;
+            }
+            
+            .header-right {
+                position: absolute !important;
+                right: 30px !important;
+                top: 30px !important;
+                width: 35% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 20px !important;
+                align-items: flex-end !important;
+            }
+            
+            .social-links, .certification-badge {
+                page-break-inside: avoid !important;
+                display: flex !important;
+                position: relative !important;
+            }
+            
+            .certification-badge {
+                background: rgba(255, 255, 255, 0.15) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
             }
             
             .content {
@@ -307,6 +493,81 @@
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
+                forced-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            img, svg {
+                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact !important;
+                forced-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+
+            .profile-photo-container {
+                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact !important;
+                forced-color-adjust: exact !important;
+                color-adjust: exact !important;
+                page-break-inside: avoid;
+                border: 4px solid white !important;
+            }
+
+            .profile-photo {
+                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact !important;
+                forced-color-adjust: exact !important;
+                color-adjust: exact !important;
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+
+            .certification-badge img {
+                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact !important;
+                forced-color-adjust: exact !important;
+                color-adjust: exact !important;
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .profile-section {
+                width: 100%;
+                align-items: center;
+            }
+
+            .header-right {
+                position: relative;
+                width: 100%;
+                right: 0;
+                top: 0;
+                margin-top: 20px;
+                align-items: center;
+            }
+
+            .social-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .social-links a {
+                min-width: 0;
+                flex: 1;
+            }
+
+            .certification-badge {
+                width: 100%;
             }
         }
     </style>
@@ -314,29 +575,42 @@
 <body>
     <div class="resume-container">
         <div class="header">
-            <img src="imran.jpeg" alt="Imran Shariff HS" class="profile-photo">
-            <div class="header-content">
-                <div class="name">Imran Shariff HS</div>
-                <div class="contact-info">
-                    <div>📍 Bangalore, India 560050</div>
-                    <div>📞 +91-7892932345</div>
-                    <div>📧 imranshariffhs@gmail.com</div>
-                    <div>🌐 <a href="https://imranshariffhs.github.io/Resume-view/" target="_blank" style="color: white; text-decoration: none;">View Live Resume</a></div>
+            <div class="profile-section">
+                <div class="profile-photo-container">
+                    <img src="imran.jpeg" alt="Imran Shariff HS" class="profile-photo">
+                </div>
+                <div class="header-content">
+                    <div class="name">Imran Shariff HS</div>
+                    <div class="contact-info">
+                        <div>📍 Bangalore, India 560050</div>
+                        <div>📞 +91-7892932345</div>
+                        <div>📧 imranshariffhs@gmail.com</div>
+                        <div>🌐 <a href="https://imranshariffhs.github.io/Resume-view/" target="_blank" style="color: white; text-decoration: none;">View Live Resume</a></div>
+                    </div>
                 </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/imran-shariff-h-s-a78625205/" target="_blank">
-                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    LinkedIn
-                </a>
-                <a href="https://github.com/imranshariffhs" target="_blank">
-                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
+            <div class="header-right">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/imran-shariff-h-s-a78625205/" target="_blank" class="linkedin">
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/imranshariffhs" target="_blank" class="github">
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                <div class="certification-badge">
+                    <img src="https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Certified">
+                    <div class="text">
+                        <strong>AWS Certified</strong>
+                        Solutions Architect
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -344,11 +618,15 @@
             <div class="section">
                 <div class="section-title"><i class="fas fa-user-circle"></i>Summary</div>
                 <div class="summary-text">
-                    <strong>Software Engineer</strong> with <strong>3.7+ years</strong> of experience in Software Development. Recognized for pursuing a career that provides a challenging environment to engage with, be receptive to innovative ideas, and enhance technical competency while working with emerging technologies and delivering value, promoting the organization's growth.
+                    <strong>Software Engineer</strong> with <strong>4 years</strong> of experience in Software Development. Recognized for pursuing a career that provides a challenging environment to engage with, be receptive to innovative ideas, and enhance technical competency while working with emerging technologies and delivering value, promoting the organization's growth.
                     <br><br>
-                    <i class="fas fa-check-circle" style="color: #27ae60;"></i> Proficient in building scalable <strong>Python REST API frameworks</strong> using <strong>Django</strong>, including development of web applications with integrated APIs for data handling, model training, and inferencing. Experienced in implementing <strong>Machine Learning pipelines</strong> and deploying <strong>Generative AI solutions</strong> using <strong>LangChain</strong>, <strong>RAG (Retrieval-Augmented Generation)</strong>, and <strong>MCP (Model Context Protocol)</strong> architectures for intelligent document processing and contextual response generation.
-                    <br><br>
+                    <!-- <i class="fas fa-check-circle" style="color: #27ae60;"></i> Proficient in building scalable <strong>Python REST API frameworks</strong> using <strong>Django</strong>, including development of web applications with integrated APIs for data handling, model training, and inferencing. Experienced in implementing <strong>Machine Learning pipelines</strong> and deploying <strong>Generative AI solutions</strong> using <strong>LangChain</strong>, <strong>RAG (Retrieval-Augmented Generation)</strong>, and <strong>MCP (Model Context Protocol)</strong> architectures for intelligent document processing and contextual response generation. -->
+                    <!-- <br><br> -->
                     <!-- Knowledgeable about setting up a <strong>Python REST API Framework</strong> using <strong>Django</strong>. Experience in developing web applications with <strong>APIs</strong>, <strong>Model training</strong>, creating and inferencing. -->
+                    Knowledgeable about setting up a <strong>Python REST API Framework</strong> using <strong>Django</strong>. Experience in developing web applications with <strong>APIs</strong>, <strong>Model training</strong>, creating and inferencing. Skilled in building robust <strong>ETL pipelines</strong> for data extraction, transformation, and loading using Python and SQL. Capable of automating data workflows, integrating with various data sources, and ensuring data quality and consistency for analytics and machine learning.
+                    
+
+
                 </div>
             </div>
             

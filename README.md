@@ -1,5 +1,11 @@
 # 👨‍💻 Imran Shariff HS - Professional Resume
 
+<div align="center">
+  <img src="https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" width="150" height="150" alt="AWS Solutions Architect">
+  
+  [![AWS Solutions Architect](https://img.shields.io/badge/AWS-Solutions_Architect_Certified-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
+</div>
+
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fimranshariffhs.github.io%2FResume-view%2F)](https://imranshariffhs.github.io/Resume-view/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/imranshariffhs/Resume-view)](https://github.com/imranshariffhs/Resume-view/commits/main)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/imran-shariff-h-s-a78625205/)
