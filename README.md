@@ -1,7 +1,7 @@
 # 👨‍💻 Imran Shariff HS - Professional Resume
 
 <div align="center">
-  <img src="imran.jpeg" width="120" height="120" style="border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1);" alt="Imran Shariff HS">
+ 
   
   <div style="margin: 15px 0;">
     <a href="https://www.linkedin.com/in/imran-shariff-h-s-a78625205/" style="text-decoration: none; margin: 0 5px;">
