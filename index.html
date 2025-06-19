@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imran Shariff HS - Resume</title>
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-        
         @page {
             size: A4;
             margin: 0;
@@ -29,14 +24,18 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
         }
         
         .resume-container {
             width: 210mm;
             background: white !important;
-            margin: 20px auto;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin: 0 auto;
             position: relative;
             padding: 0;
         }
@@ -49,6 +48,7 @@
             align-items: center;
             gap: 30px;
             width: 100%;
+            position: relative;
         }
         
         .profile-photo {
@@ -58,7 +58,6 @@
             border-radius: 50%;
             border: 4px solid white !important;
             object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
         .header-content {
@@ -78,15 +77,17 @@
         }
         
         .contact-info div {
-            margin: 8px 0;
+            margin: 5px 0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             color: white !important;
         }
         
         .social-links {
-            margin-top: 15px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
             display: flex;
             gap: 15px;
         }
@@ -96,116 +97,207 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.1);
             padding: 5px 10px;
             border-radius: 5px;
-            transition: background-color 0.3s;
-            background-color: rgba(255,255,255,0.1);
+            transition: background 0.3s;
         }
         
         .social-links a:hover {
-            background-color: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            fill: white;
         }
         
         .content {
-            padding: 30px;
+            padding: 20px 30px;
         }
         
         .section {
-            margin-bottom: 25px;
             break-inside: avoid;
             page-break-inside: avoid;
+            margin-bottom: 15px;
+            position: relative;
         }
         
         .section-title {
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-weight: bold;
             color: #2c3e50 !important;
             border-bottom: 3px solid #3498db !important;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section-title i {
-            color: #3498db !important;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .summary-text {
             font-size: 1em;
-            line-height: 1.6;
-            color: #444;
+            line-height: 1.5;
             background: #f8f9fa !important;
-            padding: 20px;
+            padding: 15px;
             border-left: 4px solid #3498db !important;
             border-radius: 4px;
-            margin: 15px 0;
+            margin: 10px 0;
+        }
+        
+        .job-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2c3e50 !important;
+            margin-bottom: 4px;
+        }
+        
+        .company-date {
+            font-weight: 500;
+            color: #3498db !important;
+            margin-bottom: 12px;
+        }
+        
+        .project-highlight {
+            font-weight: bold;
+            color: #e74c3c !important;
+            margin: 12px 0 8px 0;
+            font-size: 1.1em;
+        }
+        
+        .case-title {
+            font-weight: bold;
+            color: #27ae60 !important;
+            margin: 10px 0 5px 0;
         }
         
         .skills-category {
             font-weight: bold;
             color: #2c3e50 !important;
-            margin: 15px 0 10px 0;
+            margin: 15px 0 8px 0;
             font-size: 1.1em;
         }
         
         .skill-item {
             margin: 8px 0;
-            padding-left: 20px;
+            padding-left: 15px;
             position: relative;
-            color: #444;
         }
         
         .skill-item::before {
             content: "•";
             color: #3498db !important;
             position: absolute;
-            left: 5px;
+            left: 0;
         }
         
-        .experience-item {
-            margin-bottom: 20px;
-        }
-        
-        .job-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #2c3e50 !important;
-        }
-        
-        .company-date {
-            color: #3498db !important;
+        .skill-name {
             font-weight: 500;
-            margin: 5px 0 10px 0;
-        }
-        
-        .project-highlight {
-            font-weight: bold;
-            color: #e74c3c !important;
-            margin: 15px 0 10px 0;
+            color: #2c3e50 !important;
         }
         
         .accomplishment-item {
             margin: 10px 0;
-            padding-left: 25px;
+            padding-left: 15px;
             position: relative;
         }
         
-        .accomplishment-item i {
+        .accomplishment-item::before {
+            content: "★";
             color: #f1c40f !important;
             position: absolute;
             left: 0;
         }
         
+        .award-name {
+            font-weight: bold;
+            color: #e74c3c !important;
+        }
+        
+        .certification {
+            font-weight: bold;
+            color: #8e44ad !important;
+            margin: 10px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .certification::before {
+            content: "✓";
+            color: #8e44ad !important;
+            position: absolute;
+            left: 0;
+        }
+        
+        p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+        
+        strong {
+            color: #2c3e50 !important;
+        }
+        
+        h3 {
+            margin: 10px 0;
+            color: #333 !important;
+            font-size: 1em;
+            font-weight: normal;
+        }
+        
         @media print {
-            body {
-                background: white;
+            @page { 
+                size: A4;
+                margin: 10mm 0 10mm 0;  
             }
+
+            @page :first {
+                margin-top: 0;
+            }
+            
+            html, body {
+                width: 210mm;
+                height: auto;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white !important;
+            }
+            
             .resume-container {
+                width: 100%;
+                height: auto;
                 margin: 0;
+                padding: 0;
                 box-shadow: none;
+            }
+            
+            .header {
+                width: 100%;
+                background: linear-gradient(135deg, #2c3e50, #3498db) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .content {
+                padding: 20px 30px;
+            }
+            
+            .section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 8px;
+            }
+
+            /* Force specific sections to start on new pages */
+            .section-title:not(:first-child) {
+                page-break-before: always;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
         }
     </style>
@@ -215,112 +307,161 @@
         <div class="header">
             <img src="imran.jpeg" alt="Imran Shariff HS" class="profile-photo">
             <div class="header-content">
-                <h1 class="name">Imran Shariff HS</h1>
+                <div class="name">Imran Shariff HS</div>
                 <div class="contact-info">
-                    <div><i class="fas fa-map-marker-alt"></i> Bangalore, India 560050</div>
-                    <div><i class="fas fa-phone"></i> +91-7892932345</div>
-                    <div><i class="fas fa-envelope"></i> imranshariffhs@gmail.com</div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/imran-shariff-h-s-a78625205/" target="_blank">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/imranshariffhs" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
+                    <div>📍 Bangalore, India 560050</div>
+                    <div>📞 +91-7892932345</div>
+                    <div>📧 imranshariffhs@gmail.com</div>
+                    <div>🌐 <a href="https://imranshariffhs.github.io/Resume-view/" target="_blank" style="color: white; text-decoration: none;">View Live Resume</a></div>
                 </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/imran-shariff-h-s-a78625205/" target="_blank">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/imranshariffhs" target="_blank">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
             </div>
         </div>
         
         <div class="content">
             <div class="section">
-                <h2 class="section-title"><i class="fas fa-user-circle"></i> Summary</h2>
+                <div class="section-title">Summary</div>
                 <div class="summary-text">
-                    <strong>Software Engineer</strong> with <strong>3.5+ years</strong> of experience in Software Development. Recognized for pursuing a career that provides a challenging environment to engage with, be receptive to innovative ideas, and enhance technical competency while working with emerging technologies and delivering value, promoting the organization's growth.<br><br>
+                    <strong>Software Engineer</strong> with <strong>3.5+ years</strong> of experience in Software Development. Recognized for pursuing a career that provides a challenging environment to engage with, be receptive to innovative ideas, and enhance technical competency while working with emerging technologies and delivering value, promoting the organization's growth.
+                    <br><br>
                     Knowledgeable about setting up a <strong>Python REST API Framework</strong> using <strong>Django</strong>. Experience in developing web applications with <strong>APIs</strong>, <strong>Model training</strong>, creating and inferencing.
                 </div>
             </div>
-
+            
             <div class="section">
-                <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills</h2>
+                <div class="section-title">Skills</div>
+                
                 <div class="skills-category">Data Engineering and Processing</div>
-                <div class="skill-item">Python – Extensive experience with data engineering, and AI/ML solutions</div>
-                <div class="skill-item">Web frameworks: Django, Flask</div>
-                <div class="skill-item">Database Connectivity: PyODBC, ORM (Django ORM, SQLAlchemy)</div>
-                <div class="skill-item">Data Analysis and Processing: Pandas, NumPy</div>
-                <div class="skill-item">Databases: PostgreSQL, MySQL, MSSQL Server, and Sybase IQ</div>
-                <div class="skill-item">Query languages: SQL (advanced proficiency)</div>
-                <div class="skill-item">ETL & Data Pipelines: Strong background in developing and managing ETL workflows</div>
-                <div class="skill-item">Generative AI: LangChain, LangGraph, and LangSmith</div>
-                <div class="skill-item">AI APIs: Experience with Gemini and OpenAI APIs</div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
-                <div class="experience-item">
-                    <div class="job-title">Software Engineer</div>
-                    <div class="company-date">Ahana Systems and Solutions | 11/2021 - Current</div>
-                    
-                    <div class="project-highlight">Learning Hub (Team Size - 4)</div>
-                    <p>Learning Platform to help to Monitoring Learner Activities.</p>
-                    <p><strong>Responsibilities:</strong> The Learning Hub is an innovative learning platform designed to enhance the monitoring of learners' activities. Our primary focus is to create an engaging and efficient environment for both learners and educators by incorporating advanced technologies such as <strong>machine learning (ML)</strong> and web application frameworks like <strong>Django</strong>. The platform's stand out feature is its <strong>facial verification system</strong> that ensures the presence and attention of learners during sessions, thereby promoting accountability and participation.</p>
-
-                    <div class="project-highlight">Kotak Mahindra Prime Limited:</div>
-                    <p>Designed and implemented a <strong>Data Lakehouse architecture on AWS</strong>, utilising key services such as <strong>Redshift, Glue, EMR, S3, DMS, Spark, EC2, Lambda, EventBridge, SNS, KMS, and QuickSight</strong> for seamless data ingestion, processing, security, and visualisation.</p>
-
-                    <div class="project-highlight">Case Studies:</div>
-                    <div class="case-study">
-                        <strong>Case 1: Parle Agro - Demand Forecasting</strong>
-                        <p>Built a <strong>machine learning model-based prediction system</strong> to predict the sales of different product SKUs in various regions of the above FMCG business.</p>
-                    </div>
-
-                    <div class="case-study">
-                        <strong>Case 2: Equitas Bank - Loan Default Prediction</strong>
-                        <p>Built a <strong>credit risk prediction system</strong> based on historical loan data and machine learning models to manage the credit risk of banking customers post loan disbursement.</p>
-                    </div>
-
-                    <div class="case-study">
-                        <strong>Case 3: OTC Markets - Customer Data Deduplication</strong>
-                        <p>Use of <strong>Python libraries and fuzzy logic</strong> to perform the deduplication of fuzzy duplicates of a stock trading company in the USA. <strong>Identity Detection System</strong> based on rules, profiling, and other criteria.</p>
-                    </div>
-
-                    <div class="case-study">
-                        <strong>Case 4: Video Analytics (Team Size - 4)</strong>
-                        <p><strong>Project Description:</strong> Developed <strong>AI video analytics</strong> for Indian manufacturing industries, enhancing safety, and reducing insurance penalties.</p>
-                        <p><strong>Roles and Responsibilities:</strong> Developed AI video analytics solution for leading cement and chemical manufacturers in India. Addressed safety compliance challenges, reducing insurance penalties, and compensation claims. Designed an AI system to detect non-safety measures, such as the absence of safety gear, and fall detection. Conducted thorough testing of the system at client facilities. Deployed a video analytics solution using edge devices like <strong>NVIDIA Jetson</strong>, implemented in <strong>Python</strong>.</p>
-                    </div>
-
-                    <div class="case-study">
-                        <strong>Case 5: Generative AI Backend for Legal Document Processing</strong>
-                        <p>This backend system enables intelligent extraction from legal PDFs using <strong>Python, Flask, and Generative AI</strong>. It integrates <strong>OCR (Pytesseract)</strong> for reading documents, <strong>LangChain with Google Generative AI</strong> for extracting structured data, and <strong>vector databases (ChromaDB, FAISS)</strong> for semantic search. Anomaly detection ensures accurate outputs, while document comparison highlights content discrepancies. <strong>RESTful APIs</strong> support integration with any front end.</p>
-                    </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Python</span> – Extensive experience with data engineering, and AI/ML solutions
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Web frameworks:</span> Django, Flask
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Database Connectivity:</span> PyODBC, ORM (Django ORM, SQLAlchemy)
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Data Analysis and Processing:</span> Pandas, NumPy
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Databases:</span> PostgreSQL, MySQL, MSSQL Server, and Sybase IQ
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Query languages:</span> SQL (advanced proficiency)
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">ETL & Data Pipelines:</span> Strong background in developing and managing ETL workflows
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Generative AI:</span> LangChain, LangGraph, and LangSmith
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">AI APIs:</span> Experience with Gemini and OpenAI APIs
                 </div>
             </div>
-
+            
             <div class="section">
-                <h2 class="section-title"><i class="fas fa-trophy"></i> Accomplishments</h2>
-                <div class="accomplishment-item">
-                    <i class="fas fa-star"></i> Project of the Year, 2021, 2022
+                <div class="section-title">Experience</div>
+                
+                <div class="job-title">Software Engineer</div>
+                <div class="company-date">Ahana Systems and Solutions | 11/2021 - Current</div>
+                
+                <div class="project-highlight">Project Highlights:</div>
+                
+                <div class="case-title">Learning Hub (Team Size - 4)</div>
+                <p>Learning Platform to help to Monitoring Learner Activities.</p>
+                <p><strong>Responsibilities:</strong> The Learning Hub is an innovative learning platform designed to enhance the monitoring of learners' activities. Our primary focus is to create an engaging and efficient environment for both learners and educators by incorporating advanced technologies such as <strong>machine learning (ML)</strong> and web application frameworks like <strong>Django</strong>. The platform's stand out feature is its <strong>facial verification system</strong> that ensures the presence and attention of learners during sessions, thereby promoting accountability and participation.</p>
+
+                <div class="case-title">Kotak Mahindra Prime Limited:</div>
+                <p>Designed and implemented a <strong>Data Lakehouse architecture on AWS</strong>, utilising key services such as <strong>Redshift, Glue, EMR, S3, DMS, Spark, EC2, Lambda, EventBridge, SNS, KMS, and QuickSight</strong> for seamless data ingestion, processing, security, and visualisation. </p>
+                
+                <h3>Experienced in <strong>machine learning and Python</strong>.</h3>
+                
+                <div class="case-title">Case 1: Parle Agro - Demand Forecasting</div>
+                <p>Built a <strong>machine learning model-based prediction system</strong> to predict the sales of different product SKUs in various regions of the above FMCG business.</p>
+                
+                <div class="case-title">Case 2: Equitas Bank - Loan Default Prediction</div>
+                <p>Built a <strong>credit risk prediction system</strong> based on historical loan data and machine learning models to manage the credit risk of banking customers post loan disbursement.</p>
+                
+                <div class="case-title">Case 3: OTC Markets - Customer Data Deduplication</div>
+                <p>Use of <strong>Python libraries and fuzzy logic</strong> to perform the deduplication of fuzzy duplicates of a stock trading company in the USA. <strong>Identity Detection System</strong> based on rules, profiling, and other criteria.</p>
+                
+                <div class="case-title">Case 4: Video Analytics (Team Size - 4)</div>
+                <p><strong>Project Description:</strong> Developed <strong>AI video analytics</strong> for Indian manufacturing industries, enhancing safety, and reducing insurance penalties.</p>
+                <p><strong>Roles and Responsibilities:</strong> Developed AI video analytics solution for leading cement and chemical manufacturers in India. Addressed safety compliance challenges, reducing insurance penalties, and compensation claims. Designed an AI system to detect non-safety measures, such as the absence of safety gear, and fall detection. Conducted thorough testing of the system at client facilities. Deployed a video analytics solution using edge devices like <strong>NVIDIA Jetson</strong>, implemented in <strong>Python</strong>. Achieved significant impact, improving safety standards and worker behaviour. Resulted in reduced insurance penalties and worker compensation, due to enhanced safety.</p>
+                
+                <div class="case-title">Case 5: Generative AI Backend for Legal Document Processing</div>
+                <p>This backend system enables intelligent extraction from legal PDFs using <strong>Python, Flask, and Generative AI</strong>. It integrates <strong>OCR (Pytesseract)</strong> for reading documents, <strong>LangChain with Google Generative AI</strong> for extracting structured data, and <strong>vector databases (ChromaDB, FAISS)</strong> for semantic search. Anomaly detection ensures accurate outputs, while document comparison highlights content discrepancies. <strong>RESTful APIs</strong> support integration with any front end. Designed for scalable, real-time processing, the system automates complex data workflows in legal document review, and extraction tasks. Easy setup and modular architecture make it adaptable for enterprise use cases.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Personal Details</div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Date of Birth:</span> 07/08/1996
                 </div>
-                <div class="accomplishment-item">
-                    <i class="fas fa-star"></i> Shining Star, 2022, 2023
+                
+                <div class="skill-item">
+                    <span class="skill-name">Languages Spoken:</span> English, Kannada, Hindi
                 </div>
-                <div class="accomplishment-item">
-                    <i class="fas fa-star"></i> Received <strong>multiple expressions of recognition and appreciation</strong> from higher management for dedication and achievements.
+                
+                <div class="skill-item">
+                    <span class="skill-name">Marital Status:</span> Single
                 </div>
-                <div class="accomplishment-item">
-                    <i class="fas fa-star"></i> Contributed to a <strong>team award</strong>, demonstrating collaborative excellence, and received <strong>commendable feedback from clients</strong> for the seamless completion of projects.
+                
+                <div class="skill-item">
+                    <span class="skill-name">Current Address:</span> Bangalore
+                </div>
+                
+                <div class="skill-item">
+                    <span class="skill-name">Permanent Address:</span> Bangalore, Karnataka
                 </div>
             </div>
-
+            
             <div class="section">
-                <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+                <div class="section-title">Accomplishments</div>
+                
                 <div class="accomplishment-item">
-                    <i class="fas fa-check-circle"></i> Python Full Stack Development
+                    <span class="award-name">Project of the Year</span>, 2021, 2022
                 </div>
+                
                 <div class="accomplishment-item">
-                    <i class="fas fa-check-circle"></i> AWS Certified Solutions Architect
+                    <span class="award-name">Shining Star</span>, 2022, 2023
                 </div>
+                
+                <div class="accomplishment-item">
+                    Received <strong>multiple expressions of recognition and appreciation</strong> from higher management for dedication and achievements.
+                </div>
+                
+                <div class="accomplishment-item">
+                    Contributed to a <strong>team award</strong>, demonstrating collaborative excellence, and received <strong>commendable feedback from clients</strong> for the seamless completion of projects.
+                </div>
+                
+                <div class="certification">Python Full Stack Development</div>
+                <div class="certification">AWS Certified Solutions Architect</div>
             </div>
         </div>
     </div>
